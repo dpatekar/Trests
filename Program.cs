@@ -1,12 +1,15 @@
 ﻿using System;
+using System.Threading.Tasks;
+using Trests.EntityFramework;
 
 namespace Trests
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var s1 = new Scene1();
+            await s1.Run();
         }
     }
 }
