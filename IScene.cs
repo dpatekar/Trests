@@ -1,7 +1,9 @@
-﻿namespace Trests
+﻿using System.Threading.Tasks;
+
+namespace Trests
 {
   interface IScene
   {
-    void Run();
+    Task Run();
   }
 }

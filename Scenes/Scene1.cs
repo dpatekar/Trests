@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Trests.EntityFramework
+namespace Trests.Scenes
 {
-  class Scene1 : IAsyncScene
+  class Scene1 : IScene
   {
     public async Task Run()
     {
@@ -75,19 +75,19 @@ namespace Trests.EntityFramework
     {
       CustomerId = 1,
       City = "NY",
-      CustomerName = "John"
+      CustomerName = "John Doe"
     };
     public static Customer Customer2 = new Customer
     {
       CustomerId = 2,
       City = "CA",
-      CustomerName = "Bob"
+      CustomerName = "Bob Fetcher"
     };
     public static Customer Customer3 = new Customer
     {
       CustomerId = 3,
       City = "LA",
-      CustomerName = "Erny"
+      CustomerName = "Erny Addams"
     };
     public static Order Order1 = new Order
     {

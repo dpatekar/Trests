@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using Trests.EntityFramework;
+using Trests.Scenes;
 
 namespace Trests
 {
@@ -7,8 +7,8 @@ namespace Trests
   {
     static async Task Main(string[] args)
     {
-      var s1 = new Scene1();
-      await s1.Run();
+      var s = new Scene1();
+      await s.Run();
     }
   }
 }
