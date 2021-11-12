@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Trests.EntityFramework
@@ -17,6 +18,11 @@ namespace Trests.EntityFramework
       var x = await context.Customers.ToListAsync();
       x.Dump();
     }
+  }
+
+  public static class Shared
+  {
+    public static bool isNyCustomer(this Customer customer) => customer.City == "NY";
   }
 
   public class DataContext : DbContext
