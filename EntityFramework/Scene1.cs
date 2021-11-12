@@ -22,7 +22,7 @@ namespace Trests.EntityFramework
 
   public static class Shared
   {
-    public static bool isNyCustomer(this Customer customer) => customer.City == "NY";
+    public static bool isNYCitizen(this Customer customer) => customer.City == "NY";
   }
 
   public class DataContext : DbContext
