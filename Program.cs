@@ -1,5 +1,5 @@
-﻿using System.Threading.Tasks;
-using Trests.Scenes;
+﻿using System;
+using System.Threading.Tasks;
 
 namespace Trests
 {
@@ -7,8 +7,11 @@ namespace Trests
   {
     static async Task Main(string[] args)
     {
-      var s = new Scene1();
-      await s.Run();
+      Console.Write("Enter scene number: ");
+      var sceneNumber = int.Parse(Console.ReadLine());
+      var sceneType = Type.GetType($"Trests.Scenes.Scene{sceneNumber}");
+      var scene = (IScene)Activator.CreateInstance(sceneType);
+      await scene.Run();
     }
   }
 }

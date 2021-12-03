@@ -1,5 +1,5 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
+using System.Text.Json;
 
 namespace Trests
 {
@@ -7,7 +7,10 @@ namespace Trests
   {
     public static void Dump<T>(this T x)
     {
-      string json = JsonConvert.SerializeObject(x, Formatting.Indented);
+      var json = JsonSerializer.Serialize<T>(x, new JsonSerializerOptions
+      {
+        WriteIndented = true
+      });
       Console.WriteLine(json);
     }
   }
